@@ -16,7 +16,7 @@ If StringInStr($CmdLine[1], ".au3") <> 0 Then
 		_PathSplit($CmdLine[1], $drive, $dir, $name, $ext)
 		RunWait(@ComSpec & " /c " & $git & " add .", $drive & $dir, @SW_HIDE)
 		RunWait(@ComSpec & " /c " & $git & " commit -a --allow-empty-message -m ''", $drive & $dir, @SW_HIDE)
-		RunWait(@ComSpec & " /c " & $git & " pull", $drive & $dir, @SW_HIDE)
-		RunWait(@ComSpec & " /c " & $git & " push", $drive & $dir, @SW_HIDE)
+		RunWait(@ComSpec & " /c " & $git & " pull origin master", $drive & $dir, @SW_HIDE)
+		RunWait(@ComSpec & " /c " & $git & " push origin master", $drive & $dir, @SW_HIDE)
 	EndIf
 EndIf
